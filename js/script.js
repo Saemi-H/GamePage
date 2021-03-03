@@ -15,7 +15,7 @@ const fetchingData=()=>{
     fetch("https://rawg-video-games-database.p.rapidapi.com/games", {
       "method": "GET",
       "headers": {
-        "x-rapidapi-key": "d82253dcdcmsh6777c6c3d6110bdp1e95fcjsnbb8830b7ed5a",
+        "x-rapidapi-key": "API Key",
         "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
       }
     })
