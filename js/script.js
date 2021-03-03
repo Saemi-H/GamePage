@@ -1,5 +1,5 @@
 window.onload=function(){
-    //fetchingData();
+    fetchingData();
     searchBar();
     gnbSub();
     mnavSub();
