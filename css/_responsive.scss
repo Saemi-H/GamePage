@@ -1,0 +1,75 @@
+
+@media screen and (max-width: 1200px){
+    .htop .htop-inner, #all-game #all-inner, #event #event-inner, #video #video-inner, #update #update-inner, footer #footer-inner{
+        width: 90%;
+    }
+    #visual-cont{
+        width: 100%;
+        margin-top: 0;
+    }
+    #pc-gnb, .search, #visual-cont .visual-dots, #video #background-video, #event #event-inner ul li div{
+        display: none;
+    }
+    header{
+        position: fixed;
+        z-index: 99;
+    }
+    .htop .htop-inner .fa-bars{
+        display: inline-block;
+    }
+    
+    #event{
+        background-color: transparent;
+    }
+    #event #event-inner ul li{
+        width: 50%;
+        height: 50px;
+        background-color: $mainColor;
+        border: $boxBorder;
+        &:hover{
+            transform: none;
+        }
+        a{
+            background-color: transparent;
+            border-radius: 0%;
+            &::after, &::before{
+                display: none;
+            }
+            &:hover{
+                background-color: $subColor;
+            }
+            p{
+                line-height: 50px;
+            }
+            img{
+                display: none;
+            }
+        }
+    }
+    #video{
+        height: 500px;
+    }
+    #video #video-inner{
+        top: 0%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #event #event-inner ul li{
+        width: 100%;
+    }
+    #update #update-inner ul li{
+        width:90%;
+        height: 200px;
+        p{
+            animation: none;
+        }
+        button{
+            display: none;
+        }
+    }
+    footer #footer-inner .ftop .right, footer #footer-inner .fmenu{
+        display: none;
+    }
+
+}

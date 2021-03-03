@@ -1,0 +1,79 @@
+footer{
+    width: 100%;
+    padding: $sectionMargin 0;
+    background-color: $layerColor;
+    #footer-inner{
+        width: 1200px;
+        margin: $marginMiddle;
+        .ftop{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            p{
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+                @include sansFont();
+            }
+            .flogo{
+                font-size: 3rem;
+                font-weight: bold;
+                font-family: 'Lobster';
+            }
+            .right{
+                .main{
+                    border: $boxBorder;
+                    a{
+                        display: block;
+                        @include famSiteBtn();
+                    }
+                }
+                .option-box{
+                    display: none;
+                    height: 0%;
+                    ul{
+                        button{
+                            @include famSiteBtn();
+                            &:hover{
+                                background-color: $subColor;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .drop-select{
+                    display: block;
+                    height: inherit;
+                }
+            }
+        }//ftop
+
+        .fmenu{
+            width: 100%;
+            ul{
+                width: 50%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-around;
+                li{
+                   width: 25%;
+                   a{
+                       display: inline-block;
+                       width: 100%;
+                       position: relative;
+                       text-align: center;
+                       &::after{
+                           content: "";
+                           display: inline-block;
+                           width: 1px;
+                           height: 16px;
+                           background-color: #1f1f21;
+                           position: absolute;
+                           right:0;
+                           top:0;
+                       }
+                   }
+                }
+            }
+        }//fmenu
+    }
+}

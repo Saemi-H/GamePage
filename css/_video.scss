@@ -1,0 +1,20 @@
+#video{
+    width: 100%;
+    height: 750px;
+    margin: $sectionMargin 0;
+    #background-video{
+        min-width: 100%;
+        filter: blur(10px);
+    }
+    #video-inner{
+        width: 1200px;
+        margin: $marginMiddle;
+        height: 450px;
+        position: relative;
+        top:-500px;
+        video{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}//video

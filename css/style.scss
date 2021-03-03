@@ -1,0 +1,118 @@
+$mainColor:rgba(254, 231, 21, 1);
+$layerColor: rgba(43,29,20,0.9);
+$subColor: rgba(235, 97, 35, 1);
+$marginMiddle: 0 auto;
+$boxBorder: 1px solid $layerColor;
+$sectionMargin: 50px;
+$shadowColor:rgba(212, 175, 55, 0.8);
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@mixin slideUp {
+    animation: showGameTit 2s forwards;
+}//slideUp
+@mixin sansFont {
+    font-family: sans-serif;
+}
+@mixin lineGradient($bottom){
+    content: "";
+    display: inline-block;
+    width: 90%;
+    height: 3px;
+    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    position: absolute;
+    bottom: $bottom;
+    left: 5%;
+}
+@mixin topGradient {
+    content: "";
+    display: inline-block;
+    height: 90%;
+    width: 3px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+}
+@mixin famSiteBtn (){
+    width: 200px;
+    height: 50px;
+    @include sansFont();
+    text-align: center;
+    padding: 10px;
+    background-color: $mainColor;
+    border: none;
+}
+
+@keyframes showGameTit{
+    from{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(90%);
+    }
+    to{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes lineGradientMove{
+    from{
+        width: 0%;
+        visibility: hidden;
+    }
+    to{
+        width: 90%;
+        visibility: visible;
+    }
+}
+
+@keyframes topGradientMove{
+    from{
+        height: 0%;
+        visibility: hidden;
+    }
+    to{
+        height: 90%;
+        visibility: visible;
+    }
+}
+
+@import './pcheader';
+@import './mnav';
+@import './visual';
+@import './allgame';
+@import './event';
+@import './video';
+@import './update';
+@import './footer';
+@import './responsive';
+
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    font-size: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #1f1f21;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive, sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+
+
+h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px $shadowColor;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    color: #fff;
+    font-size: 3rem;
+}

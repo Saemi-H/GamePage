@@ -1,0 +1,145 @@
+header{
+    width: 100%;
+}
+.htop{
+    width: 100%;
+    background-color: $mainColor;
+    border-bottom: 1px solid $subColor;
+    .htop-inner{
+        width: 1200px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        margin: $marginMiddle;
+        align-items: center;
+        h1{
+            a{
+                font-size: 3rem;
+            }
+            
+        }
+        input{ 
+            width: 0px;
+            border:none;
+            border-bottom: $boxBorder;
+            transition: all 1s ease;
+            background-color: transparent;
+            &:focus{
+                outline-color: transparent;
+            }
+        }
+        .focused{
+            width: 200px;
+        }
+        .fa-search{
+            font-size: 2rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .fa-bars{
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+           }
+        .on{
+            transform: rotate(90deg);
+        }
+    }
+    //htop-inner
+    
+}
+#pc-gnb{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    box-shadow: 0px 5px $shadowColor;
+    border-bottom-left-radius: 20px;    
+    background-color: $subColor;
+    ul{
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    margin: $marginMiddle;
+        li{
+            width: 25%;
+            text-align: center;
+            a{
+                display: inline-block;
+                width: 100%;
+                height: 55px;
+                line-height: 55px;
+                font-size: 1.6rem;
+                color: #fff;
+                &:hover{
+                    background-color: $mainColor;
+                    font-weight: bold;
+                    border:1px solid $mainColor;
+                    color : $layerColor;
+                }
+                }//a
+                .sub-menu{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    display: none;
+                    transition: all 0.5s ease-in-out;
+                    
+                    li{
+                        text-align: center;
+                        width: 100%;
+                        a{
+                            display: inline-block;
+                            width: 100%;
+                            border: none;
+                            color : $layerColor;
+                            font-size: 1.4rem;
+                            line-height: 120%;
+                            @include sansFont();
+                            &:hover{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    
+                }
+                //sub-menu
+                .show-sub-menu{
+                    display: inherit;
+                }
+            }//li
+    
+    }
+    .sub-bg{
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        top: 55px;
+        left:0;
+        z-index: -1;
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }  
+    //sub-bg
+    .show-sub-bg{
+        animation: subBgSlide 0.3s ease-in-out;
+        transform: translateY(0%);
+        background-color: $mainColor;
+        display: block;
+    }
+
+}//pc-gnb
+
+@keyframes subBgSlide{
+    from{display: none;
+      
+        background-color: transparent;
+    }
+
+    to{
+        display: inherit;
+        background-color: $mainColor;
+    }
+}
