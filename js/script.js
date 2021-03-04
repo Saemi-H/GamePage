@@ -173,6 +173,12 @@ const mnavSub=()=>{
             e.preventDefault()
         mNavBar.classList.toggle('on')
         mNav.classList.toggle('show-mnav');
+        mMainMenu.forEach(menu=>{
+            menu.classList.remove('clicked')
+        })
+        mSub.forEach(sub=>{
+            sub.classList.remove('show-msub')
+        })
     })
     const toggleMenu =(e)=>{
         e.preventDefault();
